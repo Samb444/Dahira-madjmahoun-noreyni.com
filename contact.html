@@ -1,76 +1,136 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>contact</title>
-
-    <link rel="stylesheet" href="css/style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Dahira Madjmahoun Noreyni Touba Malika</title>
+  <meta name="description" content="Coordonnées, adresse et localisation du Dahira Madjmahoun Noreyni Touba Malika à Malika, Sénégal.">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-    <!-- HEADER -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navigation principale">
+      <a href="index.html" class="logo"><img src="css/js/logo.jpeg" alt="Logo Dahira Madjmahoun Noreyni Touba Malika" width="150px"></a>
+      <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="organisation.html">Organisation</a></li>
+        <li><a href="activites.html">Activités</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="medias.html">Médias</a></li>
+        <li><a href="ressources.html">Ressources</a></li>
+        <li><a href="adhesion.html" class="btn-nav">Adhésion</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" aria-label="Basculer le mode sombre/clair" data-theme-toggle><span aria-hidden="true">🌙</span></button>
+    </nav>
+  </header>
 
-    <header>
+  <main id="main-content">
 
-        <div class="logo">
+    <section class="page-header">
+      <p class="eyebrow">Contact</p>
+      <h1>Nous contacter</h1>
+      <p class="page-lead">Une question ? Contactez le bureau communication du Dahira.</p>
+    </section>
 
-            <img src="images/logo.png" alt="Logo Dahira">
+    <div class="contact-layout">
 
-            <h1>Dahira Madjmahoun Noreyni</h1>
-
+      <section class="section content-section contact-info" aria-labelledby="coordonnees-title">
+        <h2 id="coordonnees-title">Coordonnées</h2>
+        <ul class="contact-list">
+          <li>
+            <span class="contact-icon" aria-hidden="true">📍</span>
+            <span>Malika, Sénégal</span>
+          </li>
+          <li>
+            <span class="contact-icon" aria-hidden="true">📞</span>
+            <a href="tel:+221000000000">+221 76 611 12 39</a>
+          </li>
+          <li>
+            <span class="contact-icon" aria-hidden="true">💬</span>
+            <a href="https://t.me/daaramadjimahou" target="_blank" rel="noopener">WhatsApp</a>
+          </li>
+          <li>
+            <span class="contact-icon" aria-hidden="true">✉️</span>
+            <a href="mailto:contact@dahira-madjmahoun.sn">contact@dahira-madjmahoun.sn</a>
+          </li>
+        </ul>
+        <div class="footer-social" aria-label="Réseaux sociaux">
+          <a href="#" aria-label="Facebook">Facebook</a>
+          <a href="#" aria-label="Instagram">Instagram</a>
         </div>
+      </section>
 
-        <nav>
+      <section class="section content-section form-section" aria-labelledby="contact-form-title">
+        <h2 id="contact-form-title">Envoyer un message</h2>
+        <form class="contact-form" data-contact-form novalidate>
+          <div class="form-group">
+            <label for="contact-nom">Nom complet <span aria-hidden="true">*</span></label>
+            <input type="text" id="contact-nom" name="nom" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email <span aria-hidden="true">*</span></label>
+            <input type="email" id="contact-email" name="email" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="contact-sujet">Sujet</label>
+            <input type="text" id="contact-sujet" name="sujet">
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message <span aria-hidden="true">*</span></label>
+            <textarea id="contact-message" name="message" rows="5" required></textarea>
+          </div>
+          <div class="form-group" data-captcha-placeholder></div>
+          <button type="submit" class="btn btn-primary btn-full">Envoyer le message</button>
+          <p class="form-feedback" data-contact-feedback role="status" aria-live="polite"></p>
+        </form>
+      </section>
 
-            <ul>
+    </div>
 
-                <li><a href="index.html">Accueil</a></li>
+    <section class="section map-section" aria-labelledby="map-title">
+      <h2 id="map-title" class="sr-only">Localisation</h2>
+      <div class="map-embed">
+        <iframe
+          src="https://www.google.com/maps?q=Malika,Sénégal&output=embed"
+          title="Localisation du Dahira Madjmahoun Noreyni Touba Malika à Malika"
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
 
-                <li><a href="a-propos.html">a propos</a></li>
+  </main>
 
-                <li><a href="organisation.html">Organisation</a></li>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="css/js/logo.jpeg" alt="Logo Dahira Madjmahoun Noreyni Touba Malika" width="100px">
+        <p>Dahira Madjmahoun Noreyni Touba Malika — Malika, Sénégal</p>
+      </div>
+      <nav class="footer-links" aria-label="Liens du site">
+        <a href="apropos.html">À propos</a>
+        <a href="organisation.html">Organisation</a>
+        <a href="activites.html">Activités</a>
+        <a href="actualites.html">Actualités</a>
+        <a href="medias.html">Médias</a>
+        <a href="ressources.html">Ressources</a>
+        <a href="adhesion.html">Adhésion</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-social" aria-label="Réseaux sociaux">
+        <a href="#" aria-label="WhatsApp">WhatsApp</a>
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; <span data-current-year></span> Dahira Madjmahoun Noreyni Touba Malika. Tous droits réservés.</p>
+  </footer>
 
-                <li><a href="activites.html">Activites</a></li>
-
-                <li><a href="actualites.html">Actualites</a></li>
-
-                <li><a href="medias.html">Medias</a></li>
-
-                <li><a href="ressources.html">Ressources</a></li>
-
-                <li><a href="adhesion.html">Adhesion</a></li>
-
-                <li><a href="contact.html">Contact</a></li>
-
-            </ul>
-
-        </nav>
-
-    </header>
-
-    <!-- CONTENU -->
-
-    <main>
-
-    </main>
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <p>© 2026 Dahira Madjmahoun Noreyni - Tous droits reserves.</p>
-
-    </footer>
-
-    <script src="js/script.js"></script>
-
+  <script src="js/script.js"></script>
 </body>
-
 </html>

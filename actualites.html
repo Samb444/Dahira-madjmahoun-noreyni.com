@@ -1,76 +1,119 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>actualites</title>
-
-    <link rel="stylesheet" href="css/style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actualités — Dahira Madjmahoun Noreyni Touba Malika</title>
+  <meta name="description" content="Événements à venir, comptes rendus et articles du Dahira Madjmahoun Noreyni Touba Malika.">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-    <!-- HEADER -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navigation principale">
+      <a href="index.html" class="logo"><img src="css/js/logo.jpeg" alt="Logo Dahira Madjmahoun Noreyni Touba Malika" width="150px"></a>
+      <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="organisation.html">Organisation</a></li>
+        <li><a href="activites.html">Activités</a></li>
+        <li><a href="actualites.html" aria-current="page">Actualités</a></li>
+        <li><a href="medias.html">Médias</a></li>
+        <li><a href="ressources.html">Ressources</a></li>
+        <li><a href="adhesion.html" class="btn-nav">Adhésion</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" aria-label="Basculer le mode sombre/clair" data-theme-toggle><span aria-hidden="true">🌙</span></button>
+    </nav>
+  </header>
 
-    <header>
+  <main id="main-content">
 
-        <div class="logo">
+    <section class="page-header">
+      <p class="eyebrow">Actualités</p>
+      <h1>Actualités &amp; blog</h1>
+      <p class="page-lead">L'actualité du Dahira : événements à venir et comptes rendus.</p>
+    </section>
 
-            <img src="images/logo.png" alt="Logo Dahira">
+    <section id="evenements" class="section content-section" aria-labelledby="evenements-title">
+      <h2 id="evenements-title">Événements à venir</h2>
+      <div class="events-list" data-events-list>
+        <article class="event-card">
+          <img src="css/js/bientot.jpeg" alt="bientot" class="event-card-image">
+          <div class="event-date">
+            <span class="event-day">samedi</span>
+            <span class="event-month">Avril</span>
+          </div>
+          <div class="event-body">
+            <h3>Nom de l'événement (MAGALU XASSIDA YI)</h3>
+            <p class="event-location">Lieu — Malika</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-            <h1>Dahira Madjmahoun Noreyni</h1>
+    <nav class="filter-tabs" aria-label="Filtrer les actualités" data-news-filters>
+      <button class="filter-btn is-active" data-filter="all">Tous</button>
+      <button class="filter-btn" data-filter="evenement">Événements à venir</button>
+      <button class="filter-btn" data-filter="compte-rendu">Comptes rendus</button>
+      <button class="filter-btn" data-filter="article">Articles</button>
+    </nav>
 
-        </div>
+    <section id="articles" class="section content-section" aria-labelledby="articles-title">
+      <h2 id="articles-title" class="sr-only">Articles</h2>
+      <div class="cards-grid news-grid" data-news-grid>
+        <article class="news-card" data-category="compte-rendu">
+          <img src="css/js/K.jpeg" alt="Image magalu xassida yi">
+          <div class="news-card-body">
+            <span class="badge">Compte rendu</span>
+            <time datetime="">Date</time>
+            <h3><a href="actualites-detail.html">Titre de l'article</a></h3>
+            <p>Résumé court de l'article ou du compte rendu.</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-        <nav>
+    <section class="section newsletter-section" aria-labelledby="newsletter-title">
+      <h2 id="newsletter-title">Restez informé</h2>
+      <p>Recevez les actualités du Dahira directement par email.</p>
+      <form class="newsletter-form" data-newsletter-form novalidate>
+        <label for="newsletter-email" class="sr-only">Adresse email</label>
+        <input type="email" id="newsletter-email" name="email" placeholder="Votre adresse email" required>
+        <button type="submit" class="btn btn-primary">S'inscrire</button>
+      </form>
+      <p class="form-feedback" data-newsletter-feedback role="status" aria-live="polite"></p>
+    </section>
 
-            <ul>
+  </main>
 
-                <li><a href="index.html">Accueil</a></li>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="css/js/logo.jpeg" alt="Logo Dahira Madjmahoun Noreyni Touba Malika" width="100px">
+        <p>Dahira Madjmahoun Noreyni Touba Malika — Malika, Sénégal</p>
+      </div>
+      <nav class="footer-links" aria-label="Liens du site">
+        <a href="apropos.html">À propos</a>
+        <a href="organisation.html">Organisation</a>
+        <a href="activites.html">Activités</a>
+        <a href="actualites.html">Actualités</a>
+        <a href="medias.html">Médias</a>
+        <a href="ressources.html">Ressources</a>
+        <a href="adhesion.html">Adhésion</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-social" aria-label="Réseaux sociaux">
+        <a href="#" aria-label="WhatsApp">WhatsApp</a>
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; <span data-current-year></span> Dahira Madjmahoun Noreyni Touba Malika. Tous droits réservés.</p>
+  </footer>
 
-                <li><a href="a-propos.html">a propos</a></li>
-
-                <li><a href="organisation.html">Organisation</a></li>
-
-                <li><a href="activites.html">Activites</a></li>
-
-                <li><a href="actualites.html">Actualites</a></li>
-
-                <li><a href="medias.html">Medias</a></li>
-
-                <li><a href="ressources.html">Ressources</a></li>
-
-                <li><a href="adhesion.html">Adhesion</a></li>
-
-                <li><a href="contact.html">Contact</a></li>
-
-            </ul>
-
-        </nav>
-
-    </header>
-
-    <!-- CONTENU -->
-
-    <main>
-
-    </main>
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <p>© 2026 Dahira Madjmahoun Noreyni - Tous droits reserves.</p>
-
-    </footer>
-
-    <script src="js/script.js"></script>
-
+  <script src="js/script.js"></script>
 </body>
-
 </html>

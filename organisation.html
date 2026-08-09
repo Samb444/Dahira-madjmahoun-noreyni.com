@@ -1,76 +1,145 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>organisation</title>
-
-    <link rel="stylesheet" href="css/style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organisation — Dahira Madjmahoun Noreyni Touba Malika</title>
+  <meta name="description" content="Organigramme, message du président et commissions du Dahira Madjmahoun Noreyni Touba Malika.">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-    <!-- HEADER -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navigation principale">
+      <a href="index.html" class="logo"><img src="css/js/logo.jpeg" alt="Logo Dahira Madjmahoun Noreyni Touba Malika" width="150px"></a>
+      <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="organisation.html" aria-current="page">Organisation</a></li>
+        <li><a href="activites.html">Activités</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="medias.html">Médias</a></li>
+        <li><a href="ressources.html">Ressources</a></li>
+        <li><a href="adhesion.html" class="btn-nav">Adhésion</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" aria-label="Basculer le mode sombre/clair" data-theme-toggle><span aria-hidden="true">🌙</span></button>
+    </nav>
+  </header>
 
-    <header>
+  <main id="main-content">
 
-        <div class="logo">
+    <section class="page-header">
+      <p class="eyebrow">Organisation</p>
+      <h1>Gouvernance et structure</h1>
+      <p class="page-lead">Le bureau et les commissions qui font vivre le Dahira au quotidien.</p>
+    </section>
 
-            <img src="images/logo.png" alt="Logo Dahira">
+    <nav class="sub-tabs" aria-label="Sections de la page Organisation">
+      <a href="#message-president" class="sub-tab">Message du président</a>
+      <a href="#organigramme" class="sub-tab">Organigramme</a>
+      <a href="#commissions" class="sub-tab">Commissions</a>
+    </nav>
 
-            <h1>Dahira Madjmahoun Noreyni</h1>
+    <section id="message-president" class="section content-section" aria-labelledby="president-title">
+      <h2 id="president-title">Message du président</h2>
+      <blockquote class="president-message">
+        <img src="css/js/presi.jpeg" alt="Portrait du président du Dahira" class="president-photo">
+        <p>*Assalamu alaykum wa rahmatullahi wa barakatuh, Monsieur le Président.* <br>
 
+
+Je me permets de vous contacter au sujet du Daara Madjmahoun Noreyni. Dans le cadre de la valorisation et de la modernisation de notre association islamique mouride, je travaille sur la conception d’un site web officiel qui permettra de présenter le Daara, ses activités religieuses, culturelles et sociales, son organisation, ses actualités ainsi que ses différents événements.
+
+L’objectif est de mettre en place une plateforme moderne et accessible, qui pourra également permettre aux membres et aux visiteurs de mieux connaître les activités du Daara et de rester informés.
+
+Je souhaiterais également recueillir vos orientations et vos suggestions afin que le contenu du site soit fidèle à la vision, aux valeurs et aux activités du **Daara Madjmahoun Noreyni**.
+
+Qu’Allah nous accompagne dans ce projet et nous accorde la réussite.
+
+Jërëjëf, Monsieur le Président, et qu’Allah vous récompense.
+</p>
+        — Le Président du Dahira Madjmahoun Noreyni Touba Malika
+      </blockquote>
+    </section>
+
+    <section id="organigramme" class="section content-section" aria-labelledby="organigramme-title">
+      <h2 id="organigramme-title">Organigramme</h2>
+      <div class="org-chart">
+        <div class="org-node org-node-top">Président</div>
+        <div class="org-row">
+          <div class="org-node">Vice-président</div>
+          <div class="org-node">Secrétaire général</div>
+          <div class="org-node">Trésorier</div>
         </div>
+        <div class="org-row">
+          <div class="org-node">Commission Religieuse</div>
+          <div class="org-node">Commission Sociale</div>
+          <div class="org-node">Commission Communication</div>
+            <div class="org-node">Commission Audio-visuel</div>
+        </div>
+      </div>
+    </section>
 
-        <nav>
+    <section id="commissions" class="section content-section" aria-labelledby="commissions-title">
+      <h2 id="commissions-title">Commissions</h2>
+      <div class="cards-grid">
+        <article class="commission-card">
+          <img src="css/js/religieuse.jpeg" alt="Commission Religieuse" class="commission-card-image">
+          <h3>Commission Religieuse</h3>
+          <p>Organisation des Gamou, Magal et causeries religieuses.</p>
+        </article>
+        <article class="commission-card">
+          <img src="css/js/sociale.jpeg" alt="Commission Sociale" class="commission-card-image">
+          <h3>Commission Sociale</h3>
+          <p>Solidarité et accompagnement des membres du Dahira.</p>
+        </article>
+        <article class="commission-card">
+          <img src="css/js/communication.jpeg" alt="Commission Communication" class="commission-card-image">
+          <h3>Commission Communication</h3>
+          <p>Gestion du site web, des réseaux sociaux et des publications.</p>
+        </article>
+        <article class="commission-card">
+          <img src="css/js/finance.jpeg" alt="Commission Finances" class="commission-card-image">
+          <h3>Commission Finances</h3>
+          <p>Gestion des cotisations et des dons du Dahira.</p>
+        </article>
+            <article class="commission-card">
+          <img src="css/js/audio.jpeg" alt="Commission Audio-visuel" class="commission-card-image">
+          <h3>Commission Audio-visuels</h3>
+          <p>Gestion des cotisations et des son du Dahira.</p>
+        </article>
+      </div>
+    </section>
 
-            <ul>
+  </main>
 
-                <li><a href="index.html">Accueil</a></li>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="css/js/logo.jpeg" alt="Logo Dahira Madjmahoun Noreyni Touba Malika" width="100px">
+        <p>Dahira Madjmahoun Noreyni Touba Malika — Malika, Sénégal</p>
+      </div>
+      <nav class="footer-links" aria-label="Liens du site">
+        <a href="apropos.html">À propos</a>
+        <a href="organisation.html">Organisation</a>
+        <a href="activites.html">Activités</a>
+        <a href="actualites.html">Actualités</a>
+        <a href="medias.html">Médias</a>
+        <a href="ressources.html">Ressources</a>
+        <a href="adhesion.html">Adhésion</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-social" aria-label="Réseaux sociaux">
+        <a href="#" aria-label="WhatsApp">WhatsApp</a>
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; <span data-current-year></span> Dahira Madjmahoun Noreyni Touba Malika. Tous droits réservés.</p>
+  </footer>
 
-                <li><a href="a-propos.html">a propos</a></li>
-
-                <li><a href="organisation.html">Organisation</a></li>
-
-                <li><a href="activites.html">Activites</a></li>
-
-                <li><a href="actualites.html">Actualites</a></li>
-
-                <li><a href="medias.html">Medias</a></li>
-
-                <li><a href="ressources.html">Ressources</a></li>
-
-                <li><a href="adhesion.html">Adhesion</a></li>
-
-                <li><a href="contact.html">Contact</a></li>
-
-            </ul>
-
-        </nav>
-
-    </header>
-
-    <!-- CONTENU -->
-
-    <main>
-
-    </main>
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <p>© 2026 Dahira Madjmahoun Noreyni - Tous droits reserves.</p>
-
-    </footer>
-
-    <script src="js/script.js"></script>
-
+  <script src="js/script.js"></script>
 </body>
-
 </html>

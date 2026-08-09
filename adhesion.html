@@ -1,76 +1,130 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>adhesion</title>
-
-    <link rel="stylesheet" href="css/style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adhésion — Dahira Madjmahoun Noreyni Touba Malika</title>
+  <meta name="description" content="Rejoignez le Dahira Madjmahoun Noreyni Touba Malika : formulaire d'inscription et cotisations.">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-    <!-- HEADER -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navigation principale">
+      <a href="index.html" class="logo"><img src="css/js/logo.jpeg" alt="Logo Dahira Madjmahoun Noreyni Touba Malika" width="150px"></a>
+      <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="organisation.html">Organisation</a></li>
+        <li><a href="activites.html">Activités</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="medias.html">Médias</a></li>
+        <li><a href="ressources.html">Ressources</a></li>
+        <li><a href="adhesion.html" class="btn-nav" aria-current="page">Adhésion</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" aria-label="Basculer le mode sombre/clair" data-theme-toggle><span aria-hidden="true">🌙</span></button>
+    </nav>
+  </header>
 
-    <header>
+  <main id="main-content">
 
-        <div class="logo">
+    <section class="page-header">
+      <p class="eyebrow">Adhésion</p>
+      <h1>Rejoindre le Dahira</h1>
+      <p class="page-lead">Devenez membre et participez à la vie du Dahira Madjmahoun Noreyni Touba Malika.</p>
+    </section>
 
-            <img src="images/logo.png" alt="Logo Dahira">
+    <div class="adhesion-layout">
 
-            <h1>Dahira Madjmahoun Noreyni</h1>
+      <section id="formulaire" class="section content-section form-section" aria-labelledby="formulaire-title">
+        <h2 id="formulaire-title">Formulaire d'inscription</h2>
+        <form class="adhesion-form" data-adhesion-form novalidate>
 
+          <div class="form-group">
+            <label for="prenom">Prénom <span aria-hidden="true">*</span></label>
+            <input type="text" id="prenom" name="prenom" required autocomplete="given-name">
+          </div>
+
+          <div class="form-group">
+            <label for="nom">Nom <span aria-hidden="true">*</span></label>
+            <input type="text" id="nom" name="nom" required autocomplete="family-name">
+          </div>
+
+          <div class="form-group">
+            <label for="telephone">Téléphone / WhatsApp <span aria-hidden="true">*</span></label>
+            <input type="tel" id="telephone" name="telephone" required autocomplete="tel">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+
+          <div class="form-group">
+            <label for="lieu-residence">Lieu de résidence <span aria-hidden="true">*</span></label>
+            <input type="text" id="lieu-residence" name="lieu_residence" required placeholder="Ville, pays">
+          </div>
+
+          <div class="form-group">
+            <label for="motivation">Pourquoi souhaitez-vous rejoindre le Dahira ?</label>
+            <textarea id="motivation" name="motivation" rows="4"></textarea>
+          </div>
+
+          <div class="form-group form-checkbox">
+            <input type="checkbox" id="consentement" name="consentement" required>
+            <label for="consentement">J'accepte que mes informations soient utilisées dans le cadre de mon adhésion au Dahira.</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">Envoyer ma demande d'adhésion</button>
+          <p class="form-feedback" data-adhesion-feedback role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <aside id="cotisations" class="section content-section cotisations-aside" aria-labelledby="cotisations-title">
+        <h2 id="cotisations-title">Cotisations</h2>
+        <p>Informations sur les modalités de cotisation des membres du Dahira.</p>
+        <ul class="cotisation-list">
+          <li>Cotisation mensuelle — <em>montant à définir</em></li>
+          <li>Cotisation exceptionnelle (Gamou, Magal) — <em>montant à définir</em></li>
+        </ul>
+        <div class="donation-methods">
+          <h3>Moyens de paiement</h3>
+          <p>Orange Money · Wave</p>
         </div>
+      </aside>
 
-        <nav>
+    </div>
 
-            <ul>
+  </main>
 
-                <li><a href="index.html">Accueil</a></li>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="css/js/logo.jpeg" alt="Logo Dahira Madjmahoun Noreyni Touba Malika" width="100px">
+        <p>Dahira Madjmahoun Noreyni Touba Malika — Malika, Sénégal</p>
+      </div>
+      <nav class="footer-links" aria-label="Liens du site">
+        <a href="apropos.html">À propos</a>
+        <a href="organisation.html">Organisation</a>
+        <a href="activites.html">Activités</a>
+        <a href="actualites.html">Actualités</a>
+        <a href="medias.html">Médias</a>
+        <a href="ressources.html">Ressources</a>
+        <a href="adhesion.html">Adhésion</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-social" aria-label="Réseaux sociaux">
+        <a href="#" aria-label="WhatsApp">WhatsApp</a>
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; <span data-current-year></span> Dahira Madjmahoun Noreyni Touba Malika. Tous droits réservés.</p>
+  </footer>
 
-                <li><a href="a-propos.html">a propos</a></li>
-
-                <li><a href="organisation.html">Organisation</a></li>
-
-                <li><a href="activites.html">Activites</a></li>
-
-                <li><a href="actualites.html">Actualites</a></li>
-
-                <li><a href="medias.html">Medias</a></li>
-
-                <li><a href="ressources.html">Ressources</a></li>
-
-                <li><a href="adhesion.html">Adhesion</a></li>
-
-                <li><a href="contact.html">Contact</a></li>
-
-            </ul>
-
-        </nav>
-
-    </header>
-
-    <!-- CONTENU -->
-
-    <main>
-
-    </main>
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <p>© 2026 Dahira Madjmahoun Noreyni - Tous droits reserves.</p>
-
-    </footer>
-
-    <script src="js/script.js"></script>
-
+  <script src="js/script.js"></script>
 </body>
-
 </html>

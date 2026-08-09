@@ -1,76 +1,292 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Dahira Madjmahoun Noreyni</title>
-
-    <link rel="stylesheet" href="css/style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dahira Madjmahoun Noreyni Touba Malika — Accueil</title>
+  <meta name="description" content="Site officiel du Dahira Madjmahoun Noreyni Touba Malika. Activités religieuses, sociales et culturelles au service de la Ummah, dans la voie de Serigne Touba.">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-    <!-- HEADER -->
+  <!-- ============ HEADER / NAVIGATION ============ -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navigation principale">
+      <a href="index.html" class="logo">
+        <img src="css/js/logo.jpeg" width="150px" alt="Logo daara Madjmahoun noreynii">
+      </a>
 
-    <header>
+      <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
 
-        <div class="logo">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" aria-current="page">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="organisation.html">Organisation</a></li>
+        <li><a href="activites.html">Activités</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="medias.html">Médias</a></li>
+        <li><a href="ressources.html">Ressources</a></li>
+        <li><a href="adhesion.html" class="btn-nav">Adhésion</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
 
-            <img src="images/logo.png" alt="Logo Dahira">
+      <button class="theme-toggle" aria-label="Basculer le mode sombre/clair" data-theme-toggle>
+        <span aria-hidden="true">🌙</span>
+      </button>
+    </nav>
+  </header>
 
-            <h1>Dahira Madjmahoun Noreyni</h1>
+  <main id="main-content">
 
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-label="Bannière d'accueil">
+      <div class="hero-media">
+        <img src="css/js/back.jpeg" alt="Rassemblement du Dahira Madjmahoun Noreyni Touba Malika" class="hero-image">
+      </div>
+      <div class="hero-content">
+        <p class="eyebrow">Dahira Madjmahoun Noreyni — Touba Malika</p>
+        <h1>Fédérer la Ummah dans la voie de Serigne Touba</h1>
+        <p class="hero-subtitle">Activités religieuses, sociales et culturelles au cœur de Malika et de sa diaspora.</p>
+        <div class="hero-actions">
+          <a href="adhesion.html" class="btn btn-primary">Rejoindre le Dahira</a>
+          <a href="apropos.html" class="btn btn-secondary">Découvrir notre histoire</a>
         </div>
+      </div>
+    </section>
 
-        <nav>
+    <!-- ============ PRÉSENTATION RAPIDE ============ -->
+    <section class="section intro-section" aria-labelledby="intro-title">
+      <h2 id="intro-title">Qui sommes-nous</h2>
+      <p>Le Daara Madjmahoun noreyni Touba Malika est une organisation <br>
+    religieuse mouride au service de la Ummah islamique . Créé en 2007 à Malika sous le nom Toutank Cheikh Ibra. Fussionné en 2020 avec le Dahira Mame Diarra de Malika. <br>
+   Le nom Madjmahoun Noreyni a été attribué par <strong>Serigne Alioune Diop Xidma</strong>. Le Dahire œuvre dans la voie tracée par Serigne Touba à travers des activités religieuses, sociales et communautaires régulières. </p>
+      <a href="apropos.html" class="link-more">En savoir plus sur notre mission &rarr;</a>
+    </section>
 
-            <ul>
+    <!-- ============ CHIFFRES CLÉS ============ -->
+    <section class="section stats-section" aria-labelledby="stats-title">
+      <h2 id="stats-title">Le Dahira en chiffres</h2>
+      <div class="bento-grid">
+        <div class="bento-item stat-card">
+          <span class="stat-number" data-counter data-target="2017">0</span>
+          <span class="stat-label">Année de création</span>
+        </div>
+        <div class="bento-item stat-card">
+          <span class="stat-number" data-counter data-target="9">0</span>
+          <span class="stat-label">Commissions actives</span>
+        </div>
+        <div class="bento-item stat-card">
+          <span class="stat-number" data-counter data-target="300">0</span>
+          <span class="stat-label">Membres inscrits</span>
+        </div>
+        <div class="bento-item stat-card">
+          <span class="stat-number" data-counter data-target="2">0</span>
+          <span class="stat-label">Événements par an</span>
+        </div>
+      </div>
+    </section>
 
-                <li><a href="index.html">Accueil</a></li>
+    <!-- ============ ACTIVITÉS EN BREF ============ -->
+  <section class="section activities-preview" aria-labelledby="activities-title">
+  <h2 id="activities-title">Nos activités</h2>
 
-                <li><a href="a-propos.html">a propos</a></li>
+  <!-- ACTIVITÉS RELIGIEUSES -->
 
-                <li><a href="organisation.html">Organisation</a></li>
+  <!-- ACTIVITÉS RELIGIEUSES -->
 
-                <li><a href="activites.html">Activites</a></li>
+<div class="activity-category">
+  <h3 class="category-title">Activités religieuses</h3>
 
-                <li><a href="actualites.html">Actualites</a></li>
+  <div class="cards-grid">
 
-                <li><a href="medias.html">Medias</a></li>
+<article class="activity-card">
+  <img src="css/js/gamu.jpeg" alt="Gamou" width="200px">
+  <div class="activity-content">
+    <h4>Gamou</h4>
+    <p>
+      Célébration religieuse consacrée à la spiritualité,
+      à la prière et aux enseignements islamiques.
+    </p>
+  </div>
+</article>
 
-                <li><a href="ressources.html">Ressources</a></li>
+<article class="activity-card">
+  <img src="css/js/K.jpeg" alt="Grand Magal de Touba" width="200px">
+  <div class="activity-content">
+    <h4>Grand Magal de Touba</h4>
+    <p>
+      Participation aux activités spirituelles et communautaires
+      organisées à l'occasion du Grand Magal de Touba.
+    </p>
+  </div>
+</article>
 
-                <li><a href="adhesion.html">Adhesion</a></li>
+<article class="activity-card">
+  <img src="css/js/magalu .jpeg" alt="Magalu Xassida Yi" width="200px">
+  <div class="activity-content">
+    <h4>Magalu Xassida Yi</h4>
+    <p>
+      Récitation et étude des Xassaid de Cheikh Ahmadou Bamba
+      Khadimou Rassoul.
+    </p>
+  </div>
+</article>
 
-                <li><a href="contact.html">Contact</a></li>
+<article class="activity-card">
+  <img src="css/js/hbd.jpeg" alt="Dahira hebdomadaire" width="200px">
+  <div class="activity-content">
+    <h4>Dahira hebdomadaire</h4>
+    <p>
+      Rencontre religieuse organisée chaque samedi autour
+      des enseignements et de la spiritualité mouride.
+    </p>
+  </div>
+</article>
 
-            </ul>
 
-        </nav>
+  </div>
+</div>
 
-    </header>
 
-    <!-- CONTENU -->
+  <!-- ACTIVITÉS CULTURELLES -->
 
-    <main>
+  <div class="activity-category">
+    <h3 class="category-title">Activités culturelles</h3>
 
-    </main>
 
-    <!-- FOOTER -->
+<div class="cards-grid">
+  <article class="activity-card">
+    <img src="css/js/enseignmnt.jpeg" alt="enseignement mouride" width="200px">
+    <div class="activity-icon"></div>
+    <h4>Enseignement mouride</h4>
+    <p>
+      Transmission des valeurs, de l'histoire et des enseignements
+      de la voie mouride.
+    </p>
+  </article>
 
-    <footer>
+  <article class="activity-card">
+    <div class="activity-icon"></div>
+    <img src="css/js/conference.jpeg" alt="conferance mouride" width="200px">
+    <h4>Conférences religieuses</h4>
+    <p>
+      Organisation de rencontres et de conférences autour de la
+      culture et des enseignements islamiques.
+    </p>
+  </article>
 
-        <p>© 2026 Dahira Madjmahoun Noreyni - Tous droits reserves.</p>
+  <article class="activity-card">
+    <div class="activity-icon"></div>
+    <img src="css/js/xassida.jpeg" alt="xassida" width="200px">
+    <h4>Récitation des Xassaid</h4>
+    <p>
+      Séances de récitation et de valorisation du patrimoine
+      littéraire et spirituel mouride.
+    </p>
+  </article>
+</div>
 
-    </footer>
 
-    <script src="js/script.js"></script>
+  </div>
 
+  <!-- ACTIVITÉS SOCIALES -->
+
+  <div class="activity-category">
+    <h3 class="category-title">Activités sociales</h3>
+
+
+<div class="cards-grid">
+  <article class="activity-card">
+    <div class="activity-icon">🤝</div>
+    <h4>Solidarité communautaire</h4>
+    <p>
+      Actions d'entraide et de solidarité en faveur des membres
+      de la communauté.
+    </p>
+  </article>
+
+  <article class="activity-card">
+    <div class="activity-icon">❤️</div>
+    <h4>Assistance aux membres</h4>
+    <p>
+      Accompagnement des membres et soutien lors des événements
+      importants de la vie.
+    </p>
+  </article>
+
+  <article class="activity-card">
+    <div class="activity-icon">🌱</div>
+    <h4>Actions communautaires</h4>
+    <p>
+      Organisation d'actions contribuant au bien-être et au
+      développement de la communauté.
+    </p>
+  </article>
+</div>
+
+
+  </div>
+
+  <a href="activites.html" class="link-more">
+    Voir toutes nos activités &rarr;
+  </a>
+</section>
+
+
+    <!-- ============ DERNIÈRES ACTUALITÉS ============ -->
+    <section class="section news-preview" aria-labelledby="news-title">
+      <h2 id="news-title">Actualités récentes</h2>
+      <div class="cards-grid" data-news-preview>
+        <article class="news-card">
+          <img src="assets/news-placeholder-1.jpg" alt="">
+          <div class="news-card-body">
+            <time datetime="">Date</time>
+            <h3>Titre de l'actualité</h3>
+            <a href="actualites.html">Lire la suite &rarr;</a>
+          </div>
+        </article>
+      </div>
+      <a href="actualites.html" class="link-more">Toutes les actualités &rarr;</a>
+    </section>
+
+    <!-- ============ APPEL À L'ADHÉSION ============ -->
+    <section class="section cta-section" aria-labelledby="cta-title">
+      <h2 id="cta-title">Devenez membre du Dahira</h2>
+      <p>Rejoignez une communauté engagée dans la voie de Serigne Touba, à Malika comme dans la diaspora.</p>
+      <a href="adhesion.html" class="btn btn-primary">Je rejoins le Dahira</a>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="css/js/logo.jpeg" alt="Logo Dahira Madjmahoun Noreyni Touba Malika" width="100px">
+        <p>Dahira Madjmahoun Noreyni Touba Malika — Malika, Sénégal</p>
+      </div>
+      <nav class="footer-links" aria-label="Liens du site">
+        <a href="apropos.html">À propos</a>
+        <a href="organisation.html">Organisation</a>
+        <a href="activites.html">Activités</a>
+        <a href="actualites.html">Actualités</a>
+        <a href="medias.html">Médias</a>
+        <a href="ressources.html">Ressources</a>
+        <a href="adhesion.html">Adhésion</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-social" aria-label="Réseaux sociaux">
+        <a href="#" aria-label="WhatsApp">WhatsApp</a>
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; <span data-current-year></span> Dahira Madjmahoun Noreyni Touba Malika. Tous droits réservés.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
-
 </html>
