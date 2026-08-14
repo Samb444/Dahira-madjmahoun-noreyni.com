@@ -73,15 +73,44 @@
           return;
         }
 
-        // NOTE : validation côté client uniquement. Pour un envoi réel par email
-        // et un enregistrement en base de données, il faut relier ce formulaire
-        // à un service (Formspree, EmailJS) ou à un script serveur.
-        setFeedback(feedback, 'Merci ! Votre message a bien été pris en compte.', true);
-        form.reset();
+        // Envoi réel si le formulaire pointe vers un service externe (ex. Formspree)
+        var hasRemoteAction = form.action && form.action.indexOf('formspree.io') !== -1;
 
-        window.setTimeout(function () {
-          if (feedback) feedback.textContent = '';
-        }, 6000);
+        if (hasRemoteAction) {
+          var submitBtn = form.querySelector('button[type="submit"]');
+          setFeedback(feedback, 'Envoi en cours…', true);
+          if (submitBtn) submitBtn.disabled = true;
+
+          fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+          })
+            .then(function (response) {
+              if (response.ok) {
+                setFeedback(feedback, 'Merci ! Votre message a bien été envoyé au Dahira.', true);
+                form.reset();
+              } else {
+                setFeedback(feedback, 'Une erreur est survenue. Réessayez ou contactez-nous directement.', false);
+              }
+            })
+            .catch(function () {
+              setFeedback(feedback, 'Erreur de connexion. Vérifiez votre connexion internet et réessayez.', false);
+            })
+            .finally(function () {
+              if (submitBtn) submitBtn.disabled = false;
+              window.setTimeout(function () {
+                if (feedback) feedback.textContent = '';
+              }, 8000);
+            });
+        } else {
+          // Formulaire non encore connecté à un service d'envoi
+          setFeedback(feedback, 'Merci ! Votre message a bien été pris en compte.', true);
+          form.reset();
+          window.setTimeout(function () {
+            if (feedback) feedback.textContent = '';
+          }, 6000);
+        }
       });
     });
 
