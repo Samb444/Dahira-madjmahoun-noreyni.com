@@ -393,7 +393,7 @@ footer .footer-grid,
 
   top: 0;
 
-  z-index: 100;
+  z-index: 500;
 
   background: var(--color-header-bg);
 
@@ -521,7 +521,7 @@ footer .footer-grid,
 }
 
 
-/* MODE SOMBRE */
+/* MODE SOMBRE TOGGLE (bouton) */
 
 .theme-toggle {
   width: 40px;
@@ -554,6 +554,8 @@ footer .footer-grid,
   gap: 5px;
 
   width: 26px;
+
+  flex-shrink: 0;
 }
 
 .hamburger span {
@@ -566,6 +568,11 @@ footer .footer-grid,
   transition:
     transform var(--transition),
     opacity var(--transition);
+}
+
+/* Contraste garanti en mode sombre */
+[data-theme="dark"] .hamburger span {
+  background: var(--color-text);
 }
 
 
@@ -2626,52 +2633,135 @@ body.nav-open {
 
 @media (max-width: 760px) {
 
+  /* HAMBURGER : toujours à droite du header, bien visible */
   .hamburger {
     display: flex;
+
+    margin-left: auto;
+
+    order: 3;
+  }
+
+  .theme-toggle {
+    order: 2;
+  }
+
+  .logo {
+    order: 1;
   }
 
 
-  /* MENU MOBILE */
+  /* MENU MOBILE — tiroir depuis la droite */
 
   .nav-links {
+    display: flex !important;
+
     position: fixed;
 
-    inset:
-      var(--header-height)
-      0
-      0
-      0;
+    top: var(--header-height);
+    right: 0;
+    bottom: 0;
+    left: auto;
 
-    background: var(--color-bg);
+    width: 78vw;
+
+    max-width: 280px;
+
+    background: var(--color-surface);
+
+    box-shadow: var(--shadow-lg);
 
     flex-direction: column;
 
     align-items: stretch;
 
-    padding: var(--space-lg);
+    justify-content: flex-start;
 
-    gap: var(--space-md);
+    padding: 8px 20px;
+
+    margin: 0;
+
+    gap: 0;
+
+    overflow-y: auto;
+
+    -webkit-overflow-scrolling: touch;
 
     transform: translateX(100%);
 
     transition:
       transform var(--transition);
+
+    z-index: 499;
   }
 
   .nav-links.is-open {
     transform: translateX(0);
   }
 
-  .nav-links a {
-    font-size: 1.1rem;
+  /* Voile sombre derrière le tiroir : détache le menu du reste de la page,
+     et le clic dessus ferme le menu (déjà géré par script.js) */
+  body.nav-open::after {
+    content: "";
 
-    padding:
-      var(--space-sm)
-      0;
+    position: fixed;
+
+    top: var(--header-height);
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background: rgba(11, 37, 69, 0.45);
+
+    z-index: 498;
+  }
+
+  [data-theme="dark"] body.nav-open::after {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .nav-links li {
+    width: 100%;
+
+    list-style: none;
+
+    margin: 0;
+
+    padding: 0;
+  }
+
+  .nav-links a {
+    display: block;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    font-size: 15px;
+
+    line-height: 1.2;
+
+    padding: 6px 0;
+
+    color: var(--color-text) !important;
+
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  [data-theme="dark"] .nav-links a {
+    color: var(--color-text) !important;
   }
 
   .nav-links .btn-nav {
     text-align: center;
+
+    margin-top: 4px;
+
+    padding: 6px 0;
+
+    border-bottom: none;
+
+    color: #fff !important;
   }
 
 
