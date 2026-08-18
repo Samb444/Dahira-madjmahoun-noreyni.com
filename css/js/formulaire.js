@@ -90,6 +90,12 @@
               if (response.ok) {
                 setFeedback(feedback, 'Merci ! Votre message a bien été envoyé au Dahira.', true);
                 form.reset();
+
+                // Si c'est le formulaire d'adhésion, on incrémente le compteur public "membres"
+                if (form.hasAttribute('data-adhesion-form')) {
+                  fetch('https://api.countapi.xyz/hit/dahira-madjmahoun-noreyni-touba-malika/membres')
+                    .catch(function () { /* échec silencieux : sans impact sur l'utilisateur */ });
+                }
               } else {
                 setFeedback(feedback, 'Une erreur est survenue. Réessayez ou contactez-nous directement.', false);
               }

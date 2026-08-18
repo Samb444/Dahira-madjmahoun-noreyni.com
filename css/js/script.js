@@ -210,10 +210,11 @@
     var counters = document.querySelectorAll('[data-counter]');
     if (!counters.length) return;
 
+    var COUNTAPI_NAMESPACE = 'dahira-madjmahoun-noreyni-touba-malika';
+
     function easeOutQuad(t) { return t * (2 - t); }
 
-    function animateCounter(el) {
-      var target = parseFloat(el.getAttribute('data-target')) || 0;
+    function animateCounter(el, target) {
       var duration = 1400;
       var startTime = null;
 
@@ -233,15 +234,37 @@
       window.requestAnimationFrame(step);
     }
 
+    function runCounter(el) {
+      var liveKey = el.getAttribute('data-live-counter');
+      var fallbackTarget = parseFloat(el.getAttribute('data-target')) || 0;
+
+      if (!liveKey) {
+        animateCounter(el, fallbackTarget);
+        return;
+      }
+
+      // Compteur connecté à CountAPI : on va chercher le vrai nombre en ligne.
+      // En cas d'échec (service indisponible), on retombe sur data-target.
+      fetch('https://api.countapi.xyz/get/' + COUNTAPI_NAMESPACE + '/' + liveKey)
+        .then(function (res) { return res.json(); })
+        .then(function (data) {
+          var value = (data && typeof data.value === 'number') ? data.value : fallbackTarget;
+          animateCounter(el, value);
+        })
+        .catch(function () {
+          animateCounter(el, fallbackTarget);
+        });
+    }
+
     if (!('IntersectionObserver' in window)) {
-      counters.forEach(animateCounter);
+      counters.forEach(runCounter);
       return;
     }
 
     var observer = new IntersectionObserver(function (entries, obs) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          animateCounter(entry.target);
+          runCounter(entry.target);
           obs.unobserve(entry.target);
         }
       });
