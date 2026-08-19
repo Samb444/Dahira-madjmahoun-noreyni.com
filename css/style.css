@@ -2921,3 +2921,30 @@ body.nav-open {
   color: var(--color-text);
   max-width: 65ch;
 }
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.social-links a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.social-links img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.social-links a:hover img {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
